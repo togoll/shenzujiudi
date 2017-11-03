@@ -1,5 +1,6 @@
 # ticket
-
+京东抢券助手，http://newbug.xyz/ticket/#/
+目前才刚刚开始写，很简单，很粗糙，
 > A Vue.js project
 
 ## Build Setup
