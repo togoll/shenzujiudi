@@ -56,7 +56,7 @@
       </div>
       <div class="draw_button">
         <a class="button is-primary" @click="draw">开始抢券</a>
-        <a class="button is-success">结束抢券</a>
+        <a class="button is-success" @click="stop">结束抢券</a>
       </div>
     </div>
   </div>
@@ -199,6 +199,7 @@ export default {
       this.nowDate.second = nowTime.getSeconds()
     },
     timer () {
+      console.log(this.time)
       let a = setInterval(() => {
         if (this.src) {
           this.src = ''
@@ -213,11 +214,10 @@ export default {
     draw () {
       this.show = !this.show
       this.timer()
-      // this.api = 'https://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_qzu3qe&roleId=8739331&actId=66ab3083d1bf485eb732d9d62953b8ef'
     },
     stop () {
       this.flag = false
-      console.log(this.flag)
+      this.show = !this.show
     }
   }
 }
