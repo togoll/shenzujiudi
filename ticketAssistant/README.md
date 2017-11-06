@@ -3,6 +3,10 @@
 目前才刚刚开始写，很简单，很粗糙，
 > A Vue.js project
 
+第二版本上线，http://newbug.xyz/ticket2/#/
+
+教程地址： http://newbug.xyz/archives/295
+
 ## Build Setup
 
 ``` bash
