@@ -68,8 +68,8 @@ export default {
 
 <style lang="scss">
 .box {
-  width: 325px;
-  margin: 30px;
+  width: 270px;
+  margin-left: 10px;
   .notification {
     line-height: 2;
     min-height: 150px;
