@@ -9,36 +9,25 @@
   </div>
   <div class="step">
     <div class="step1">
-      <p>第一步：选择浏览器，推荐使用谷歌浏览器</p>
+      <p>第一步：选择浏览器，推荐使用谷歌浏览器,请提前5-15秒开始,新增默认20秒之后自动结束</p>
     </div>
     <div class="step2">
       <p>第二步：</p><a href="https://home.m.jd.com/myJd/newhome.action" class="button is-link" target="_blank">登陆京东</a>
     </div>
     <div class="step3">
-      <p>第三步：</p><a href="https://www.baidu.com/s?wd=%E6%97%B6%E9%97%B4&rsv_spt=1&rsv_iqid=0xb67449a50001ced2&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=7&rsv_sug1=4&rsv_sug7=100" class="button is-link" target="_blank">百度时间</a>
-    </div>
-  </div>
-  <!-- <div class="box">
-    <div class="control">
-      <div class="info" style="text-align:center;">
-        默认间隔时间
-      </div>
-      <div class="select is-primary">
-        <select v-model="time">
-          <option v-for="time in times" :value="time.value">{{ time.text }}</option>
-        </select>
-      </div>
+      <p>第三步：</p><a href="javascript:;" class="button is-link">点击下面的开始</a>
       <div class="localTime">
-        <span>本机时间：(性能问题，暂时屏蔽)</span>
+        <span>本机时间：</span>
         <span>{{nowDate.year}}年</span>
         <span>{{nowDate.mouth}}月</span>
         <span>{{nowDate.day}}日</span>
         <span>{{nowDate.hour}}时</span>
         <span>{{nowDate.minutes}}分</span>
-        <span>{{nowDate.second}}秒</span>
+        <span class="red">{{nowDate.second}}秒</span>
       </div>
+      <a href="https://www.baidu.com/s?wd=%E6%97%B6%E9%97%B4&rsv_spt=1&rsv_iqid=0xb67449a50001ced2&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=7&rsv_sug1=4&rsv_sug7=100" class="button is-link" target="_blank">百度时间</a>
     </div>
-  </div> -->
+  </div>
   <div class="boxes">
     <template v-for="api in apis">
       <ticket :name="api.name" :api="api.api" :date="api.date" :time="time"></ticket>
@@ -200,9 +189,59 @@ export default {
       ],
       apis: [
         {
+          name: '新服饰五折神券',
+          api: 'https://api.m.jd.com/client.action?functionId=newBabelAwardCollection&body=%7B%22activityId%22%3A%222dWVnoE1Qh4UUJGvrchf2dB5NzVa%22%2C%22from%22%3A%22H5node%22%2C%22scene%22%3A%221%22%2C%22args%22%3A%22key%3D3ce22bbf278e4320bfa490f64513f82c%2CroleId%3D8824030%22%2C%22mitemAddrId%22%3A%22%22%2C%22geo%22%3A%7B%22lng%22%3A%22%22%2C%22lat%22%3A%22%22%7D%7D&client=wh5&clientVersion=1.0.0&sid=f77ff103b7ca65b4702fc4a8357ad99d&uuid=14987832905831375727030&area=&_=1510106676174&callback=jsonp2',
+          date: '10，14点'
+        },
+        {
+          name: '母婴348-100',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_rabzvy&roleId=8978895&actId=f91d9f6b36a84e23b075254e7f6e9286',
+          date: '0,10,14,20点,京享值5000'
+        },
+        {
+          name: '母婴自营全品类748-300',
+          api: 'https://api.m.jd.com/client.action?functionId=newBabelAwardCollection&body=%7B%22activityId%22%3A%223XvLR3MnLXHjjJ4uCgYetfAcqpzT%22%2C%22from%22%3A%22H5node%22%2C%22scene%22%3A%221%22%2C%22args%22%3A%22key%3Df22825db960e40bf83a030da70096236%2CroleId%3D8978843%22%2C%22mitemAddrId%22%3A%22%22%2C%22geo%22%3A%7B%22lng%22%3A%22%22%2C%22lat%22%3A%22%22%7D%7D&client=wh5&clientVersion=1.0.0&sid=f77ff103b7ca65b4702fc4a8357ad99d&uuid=14987832905831375727030&area=&_=1510102677363&callback=jsonp2',
+          date: '十点'
+        },
+        {
+          name: '京东牛奶满减券',
+          api: 'http://api.m.jd.com/client.action?functionId=newBabelAwardCollection&body=%7B%22activityId%22%3A%22d4jNpRbDEY9rpEniFAEmj78Qdbk%22%2C%22from%22%3A%22H5node%22%2C%22scene%22%3A%221%22%2C%22args%22%3A%22key%3D97e20267d665495caad9c37c656887f1%2CroleId%3D8705018%22%2C%22mitemAddrId%22%3A%22%22%2C%22geo%22%3A%7B%22lng%22%3A%22%22%2C%22lat%22%3A%22%22%7D%7D&client=wh5&clientVersion=1.0.0&sid=7935131e5d49ca293545a79c70a2ac17&uuid=467679440&area=&_=1509551079787&callback=jsonp12',
+          date: '10点！【牛奶神券】'
+        },
+        {
+          name: '叮咚TOP智能音箱',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_qpzw52&roleId=8772885&actId=d93ee89bf4ff4db3bc4ed5e4f4d3b1d6',
+          date: '10点，限PLUS'
+        },
+        {
+          name: '京东手机980-150',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_rcxzg9&roleId=8930108&actId=72b902f190444d76bc3574b28d43845a',
+          date: '小米部分手机专享'
+        },
+        {
+          name: '京东手机1980-300',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_rcxzg9&roleId=8930106&actId=82f2b2dce46c4275b3015d3bb27b1e58',
+          date: '0，8，10，14，20点'
+        },
+        {
+          name: '京东手机2980-400',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_rzaahh&roleId=8930105&actId=3b659e6813354bc1b9f11183ca5a58d9',
+          date: '0，8，10，14，20点'
+        },
+        {
+          name: '京东手机4980-700',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_zrcxcc&roleId=8929852&actId=a3061fbd1f374d72a9d1751d16d51036',
+          date: '0，8，10，14，20点,京享值5000'
+        },
+        {
+          name: '非自营手机5200-1111',
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_rcxzg9&roleId=8930106&actId=82f2b2dce46c4275b3015d3bb27b1e58',
+          date: '20点，部分手机适用'
+        },
+        {
           name: '手机配件99-88',
-          api: 'https://api.m.jd.com/client.action?functionId=newBabelAwardCollection&body={"activityId":"o1SAPkr8McqBZ8N1N9LhevAGKQg","from":"H5node","scene":"1","args":"key=bb66a606388d4c8c813234af55b5cc41,roleId=8705547","mitemAddrId":"","geo":{"lng":"","lat":""}}&client=wh5&clientVersion=1.0.0&area=&callback=jsonp8',
-          date: '下一场20点'
+          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_zq72ls&roleId=8705547&actId=bb66a606388d4c8c813234af55b5cc41',
+          date: '11,20点'
         },
         {
           name: '京东手机2980-400',
@@ -250,21 +289,6 @@ export default {
           date: '十点'
         },
         {
-          name: '服饰5折券',
-          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_zqq6rh&roleId=8823997&actId=a2bf2053d14c4cc5afdfe4725367f43b',
-          date: '10点，满300元打5折,最多减1000'
-        },
-        {
-          name: '母婴798-300',
-          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_qz991p&roleId=8907333&actId=dab003fe7ecd4c7797d2a9def81feadb',
-          date: '京享值5000以上，10，16，20点'
-        },
-        {
-          name: '母婴398-100',
-          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_zrd1sh&roleId=8907335&actId=ee49407c75bd404489b6ba14c854a81a',
-          date: '京享值5000以上，10，16，20点'
-        },
-        {
           name: '女装商品499-100',
           api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_qz74v3&roleId=8726204&actId=7ceeb981f81140278b7238bc5e1180a0',
           date: '1日至12日，限PLUS'
@@ -273,11 +297,6 @@ export default {
           name: '智能微联100-50',
           api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_zqxfmu&roleId=8762609&actId=489b9c4962ad4d8dbc750a6453d68c69',
           date: '22点，叮咚音箱、智能冰箱及部分微联品商品'
-        },
-        {
-          name: '叮咚TOP智能音箱',
-          api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_qpzw52&roleId=8772885&actId=d93ee89bf4ff4db3bc4ed5e4f4d3b1d6',
-          date: '10点，限PLUS'
         },
         {
           name: '羊城通100-50',
@@ -298,11 +317,6 @@ export default {
           name: '手机话费199-100',
           api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_qxwfzo&roleId=8752709&actId=686fd24a48d948988eeb4b4309a27ec7',
           date: '十点'
-        },
-        {
-          name: '京东牛奶满减券',
-          api: 'http://api.m.jd.com/client.action?functionId=newBabelAwardCollection&body=%7B%22activityId%22%3A%22d4jNpRbDEY9rpEniFAEmj78Qdbk%22%2C%22from%22%3A%22H5node%22%2C%22scene%22%3A%221%22%2C%22args%22%3A%22key%3D97e20267d665495caad9c37c656887f1%2CroleId%3D8705018%22%2C%22mitemAddrId%22%3A%22%22%2C%22geo%22%3A%7B%22lng%22%3A%22%22%2C%22lat%22%3A%22%22%7D%7D&client=wh5&clientVersion=1.0.0&sid=7935131e5d49ca293545a79c70a2ac17&uuid=467679440&area=&_=1509551079787&callback=jsonp12',
-          date: '10点！【牛奶神券】'
         }
       ],
       nowDate: {
@@ -317,7 +331,7 @@ export default {
     }
   },
   mounted () {
-    // setInterval(this.getNowTime, 200)
+    setInterval(this.getNowTime, 1000)
   },
   methods: {
     getNowTime () {
@@ -328,28 +342,27 @@ export default {
       this.nowDate.hour = nowTime.getHours()
       this.nowDate.minutes = nowTime.getMinutes()
       this.nowDate.second = nowTime.getSeconds()
-    },
-    timer () {
-      console.log(this.time)
-      let a = setInterval(() => {
-        if (this.src) {
-          this.src = ''
-        } else {
-          this.src = this.api
-        }
-        if (this.flag === false) {
-          clearInterval(a)
-        }
-      }, this.time / 2)
-    },
-    draw () {
-      this.show = !this.show
-      this.timer()
-    },
-    stop () {
-      this.flag = false
-      this.show = !this.show
     }
+    // timer () {
+    //   let a = setInterval(() => {
+    //     if (this.src) {
+    //       this.src = ''
+    //     } else {
+    //       this.src = this.api
+    //     }
+    //     if (this.flag === false) {
+    //       clearInterval(a)
+    //     }
+    //   }, this.time / 2)
+    // },
+    // draw () {
+    //   this.show = !this.show
+    //   this.timer()
+    // },
+    // stop () {
+    //   this.flag = false
+    //   this.show = !this.show
+    // }
   },
   components: {
     ticket
@@ -359,51 +372,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-// .ticket {
-//   .box {
-//     margin: 30px 40px 0;
-//     .control {
-//       display: flex;
-//       flex-direction: row;
-//       .info {
-//         display: flex;
-//         align-items: center;
-//         padding: 0 20px;
-//       }
-//       .localTime {
-//         display: flex;
-//         align-items: center;
-//         padding: 0 20px;
-//       }
-//     }
-//   }
-//   .boxes {
-//     display: flex;
-//     .box {
-//       .info {
-//           display: flex;
-//           justify-content: center;
-//           align-items: center;
-//           flex-direction: column;
-//           width: 284px;
-//           height: 134px;
-//           .control {
-//             padding-bottom: 10px;
-//           }
-//       }
-//       .iframe {
-//         display: flex;
-//         justify-content: center;
-//         width: 284px;
-//         height: 134px;
-//       }
-//       .draw_button {
-//         display: flex;
-//         justify-content:space-around;
-//       }
-//     }
-//   }
-// }
 .jingdong {
   .shenjianjiange {
     display:flex;
@@ -428,6 +396,12 @@ export default {
       }
     }
     .step3 {
+      .localTime {
+        padding: 10px 0;
+        .red {
+          color: red;
+        }
+      }
       p {
         padding-top: 8px;
         display: inline-block;

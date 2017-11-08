@@ -49,6 +49,10 @@ export default {
           clearInterval(a)
         }
       }, this.time / 2)
+      setTimeout(() => {
+        clearInterval(a)
+        this.show = !this.show
+      }, 20000)
     },
     draw () {
       this.show = !this.show
