@@ -2,7 +2,7 @@
   <div id="app">
     <div class="notification is-success header">
       <a target="_blank" href="http://newbug.xyz">网站首页</a>
-      <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=b62b68cb21fb3255c6797a34660e96c60b0f92f6bdec2761b301de7d67797823"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="神族九帝" title="神族九帝"></a>
+      <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=99852687fdf5d718e2335897258bb83729a0d48dbde7d893a2e57de7f06f6413"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="神族九帝" title="神族九帝"></a>
     </div>
     <router-view/>
   </div>

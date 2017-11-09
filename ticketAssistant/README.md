@@ -1,9 +1,12 @@
 # ticket
 京东抢券助手，http://newbug.xyz/ticket/#/
 目前才刚刚开始写，很简单，很粗糙，
-> A Vue.js project
+
+第三版本上线，http://newbug.xyz/ticket3/#/
+增加定时开启，目前是测试版本，js计时会有误差，建议手动
 
 第二版本上线，http://newbug.xyz/ticket2/#/
+美化，兼容手机，增加定时停止
 
 教程地址： http://newbug.xyz/archives/295
 

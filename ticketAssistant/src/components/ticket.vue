@@ -20,7 +20,7 @@
         <a class="button is-warning" @click="timeDraw">定时开始</a>
     </div>
     <div class="control" v-show='chzhiIsShow'>
-      距离开始还有{{ chazhiShow }}
+      还有{{ chazhiShow }}
     </div>
   </div>
 </template>
@@ -63,6 +63,9 @@ export default {
         },
         {
           value: '22'
+        },
+        {
+          value: '24'
         }
       ]
     }
@@ -115,12 +118,12 @@ export default {
       const timestamp = nowTime.getTime()
       let dingshiTime = Date.parse(nowTime.toLocaleDateString().replace(/\//g, '-') + ' ' + this.faultDate + ':00:00')
       this.chazhi = Math.ceil((dingshiTime - timestamp) / 1000)
-      console.log(this.chazhi)
       setInterval(() => {
         this.chazhi -= 1
+        this.chazhiShow = this.chazhi < 0 ? this.chazhi < -20 ? '您选择的时间已经过去' : '正在抢券' : this.chazhi < 60 ? this.chazhi + '秒' : this.chazhi < 3600 ? parseInt(this.chazhi / 60) + '分钟' + this.chazhi % 60 + '秒' : this.chazhi > 3600 * 24 ? '仅支持二十四小时内' : parseInt(this.chazhi / (60 * 60)) + '小时' + parseInt((this.chazhi % 3600) / 60) + '分钟' + ((this.chazhi % 3600) % 60) + '秒'
       }, 1000)
-      this.chazhiShow = this.chazhi < 0 ? '您选择的时间已经过去' : this.chazhi < 60 ? this.chazhi + '秒' : this.chazhi < 3600 ? parseInt(this.chazhi / 60) + '分钟' + Math.parseFloat(this.chazhi / 60) + '秒' : this.chazhi
-      if (dingshiTime - timestamp === 0) {
+      console.log(this.chazhi)
+      if (dingshiTime - timestamp === 10) {
         this.draw()
       }
     }

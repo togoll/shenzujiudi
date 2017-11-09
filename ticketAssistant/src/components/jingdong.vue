@@ -10,6 +10,7 @@
   <div class="step">
     <div class="step1">
       <p>第一步：选择浏览器，推荐使用谷歌浏览器,请提前5-15秒开始,新增默认20秒之后自动结束</p>
+      <p style="color:red;">更新定时器，暂时测试，js计算时间会不准确，建议大家还是手动</p>
     </div>
     <div class="step2">
       <p>第二步：</p><a href="https://home.m.jd.com/myJd/newhome.action" class="button is-link" target="_blank">登陆京东</a>
@@ -177,7 +178,7 @@ export default {
         {
           name: '手机配件99-88',
           api: 'http://coupon.m.jd.com/center/receiveCoupon.json?couponId=FP_zq72ls&roleId=8705547&actId=bb66a606388d4c8c813234af55b5cc41',
-          date: '11,20'
+          date: '10,20'
         },
         {
           name: '京东手机2980-400',
